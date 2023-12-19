@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan 2 bilangan</title>
+    <script>
+        function jumlah(){
+            let _bil1 = document.getElementById("bil1").value ;
+            let _bil2 = document.getElementById("bil2").value ;
+            console.log( parseInt(_bil1) + parseInt(_bil2) )
+
+            let area_hasil = document.getElementById("hasil") ;
+            area_hasil.innerHTML = parseInt(_bil1) + parseInt(_bil2) ; 
+        }
+    </script>
+    <style>
+        body{
+            background-color: steelblue;
+        }
+
+        #board{
+            background-color: aliceblue;
+            width: 700px;
+            height: 220px;
+            margin: auto;
+            margin-top: 2em;
+            padding: 1em;
+            border-radius: 0.5em;
+            border: 2px outset lightgray;
+            
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        button{
+            background-color: steelblue;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            width: 150px;
+            height: 25px;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="board">
+        <h2>Pejumlahan 2 bilangan</h2>
+        <hr><br>
+        Masukkan angka :
+    
+        <input type="number" value="" id="bil1">
+    
+        +
+    
+        <input type="number" value="" id="bil2">
+    
+        <button onclick="jumlah()">Jumlahkan!</button>
+    
+        <br>
+    
+        <h3>Hasil :</h3>
+        <span id="hasil"></span>
+    </div>
+</body>
+</html>

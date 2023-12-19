@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung kurs rupiah</title>
+    <script>
+        function hitung_luas_keliling_lingkaran(){
+            let _jari2 = document.getElementById("jari2").value ;
+            const phi = 3.14;
+
+            let area_hasil1 = document.getElementById("hasil1") ;
+            area_hasil1.innerHTML = 2*phi*parseInt(_jari2);
+
+            let area_hasil2 = document.getElementById("hasil2") ;
+            area_hasil2.innerHTML = phi*parseInt(_jari2)**2;
+        }
+    </script>
+    <style>
+        body{
+            background-color: steelblue;
+        }
+
+        #board{
+            background-color: aliceblue;
+            width: 480px;
+            height: 300px;
+            margin: auto;
+            margin-top: 2em;
+            padding: 1em;
+            border-radius: 0.5em;
+            border: 2px outset lightgray;
+            
+        }
+
+        h2, h3{
+            text-align: center;
+        }
+        
+        button{
+            background-color: steelblue;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            width: 150px;
+            height: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="board">
+        <h2>Menghitung Luas dan Keliling Lingkaran</h2>
+        <hr><br>
+
+        Masukkan jari-jari lingkaran : 
+        <input type="number" value="" id="jari2">
+        <br><br>
+
+        <button onclick="hitung_luas_keliling_lingkaran()">Hitung keliling & luas</button>
+        <br>
+
+        <h3>Hasil</h3>
+        Keliling lingkaran : 
+        <span id="hasil1"></span>
+        <br><br>
+        Luas lingkaran :
+        <span id="hasil2"></span>
+    </div>
+</body>
+</html>

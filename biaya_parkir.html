@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung biaya parkir</title>
+    <script>
+        function hitung_biaya_parkir(){
+
+        const biaya_2jam_awal = 3000;
+        const biaya_per1jam = 1000;
+
+        let masuk = document.getElementById("msk").value;
+        let keluar = document.getElementById("klr").value;
+        let selisih = keluar - masuk ;
+        let biaya = 0;
+
+        if( selisih <= 2 ){
+            biaya = biaya_2jam_awal;
+        } else{
+            jam_tambahan = selisih - 2;
+            biaya = biaya_2jam_awal + (biaya_per1jam * jam_tambahan);
+        }
+
+        let _hasil = document.getElementById("hasil");
+        _hasil.innerHTML = biaya;
+        }
+    </script>
+    <style>
+        body{
+            background-color: steelblue;
+        }
+
+        #board{
+            background-color: aliceblue;
+            width: 400px;
+            height: 270px;
+            margin: auto;
+            margin-top: 2em;
+            padding: 1em;
+            border-radius: 0.5em;
+            border: 2px outset lightgray;
+            
+        }
+
+        h2{
+            text-align: center;
+        }
+        
+        button{
+            background-color: steelblue;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            width: 150px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="board">
+        <h2>Menghitung biaya parkir</h2><hr><br>
+
+        Jam masuk : 
+       <input type="number" value="" id="msk">
+       <br>
+
+       Jam keluar : 
+       <input type="number" value="" id="klr">
+       <br><br>
+
+       <button onclick="hitung_biaya_parkir()">Hitung Biaya parkir</button>
+       <br>
+
+       <h3>Biaya parkir yang harus dibayar :</h3>
+       Rp. <span id="hasil"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung kurs rupiah</title>
+    <script>
+        function hitung_kursrupiah(){
+            let nilairupiah = document.getElementById("rp").value ;
+            const kursjual = 14.650;
+            let nilai_rupiah_ke_dolar = nilairupiah / kursjual;
+
+            let area_hasil = document.getElementById("hasil") ;
+            area_hasil.innerHTML = nilai_rupiah_ke_dolar;
+        }
+    </script>
+    <style>
+        body{
+            background-color: steelblue;
+        }
+
+        #board{
+            background-color: aliceblue;
+            width: 600px;
+            height: 290px;
+            margin: auto;
+            margin-top: 2em;
+            padding: 1em;
+            border-radius: 0.5em;
+            border: 2px outset lightgray;
+            
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        button{
+            background-color: steelblue;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            width: 150px;
+            height: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="board">
+        <h2>Menghitung Kurs Rupiah</h2>
+        <hr><br>
+        Mata uang awal : Rupiah (Rp)<br>
+        Mata uang yang diinginkan : Dollar<br>
+        Jumlah yang akan dikonversi :
+        Rp. <input type="number" value="" id="rp"> 
+        <br><br>
+
+        <button onclick="hitung_kursrupiah()">Menghitung</button>
+        <br>
+
+        <h3>Hasil konversi :</h3>
+        <span id="hasil"></span>$
+    </div>
+</body>
+</html>
